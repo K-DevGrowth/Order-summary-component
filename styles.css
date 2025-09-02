@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color1: hsl(245, 75%, 52%);
+    --primary-color2: hsl(245, 75%, 52%, 70%);
+    --title-color: hsl(223, 47%, 23%);
+    --text-color: hsl(224, 23%, 55%);
+    --background-main: hsl(225, 100%, 94%);
+    --background-plan: hsl(225, 100%, 98%);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title-color);
+}
+
+html {
+    overflow: hidden;
+    font-family: 'Red Hat Display', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    background: var(--background-main) url(./images/pattern-background-desktop.svg) no-repeat;
+}
+
+/* Style the card */
+.card {
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Style the image */
+.card .image img {
+    border-radius: 15px 15px 0 0;
+}
+
+/* Main content */
+.card .main-content {
+    padding: 20px 30px 20px;
+}
+
+.card .main-content h2 {
+    margin-bottom: 10px;
+}
+
+/* Style the plan */
+.card .main-content .plan {
+    background-color: var(--background-plan);
+    padding: 15px;
+    margin: 20px 0 30px;
+    border-radius: 10px;
+}
+
+.card .main-content .plan div img {
+    margin-right: 15px;
+    max-width: 40px;
+}
+
+/* Change background and color of the button on hover */
+.card .main-content .btn.bg-blue:hover {
+    background-color: var(--primary-color2);
+    color: #fff;
+}
+
+.card .main-content .btn.underline-blue:hover {
+    text-decoration: none;
+    color: var(--primary-color2);
+}
+
+.card .main-content .btn:hover {
+    color: var(--title-color);
+}
+
+/* Utilize classes */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    font: inherit;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--text-color);
+    transition: 0.5s;
+}
+
+.bg-blue {
+    color: #fff;
+    margin-bottom: 5px;
+    background-color: var(--primary-color1);
+    box-shadow: 0 5px 20px 0 var(--primary-color2);
+}
+
+.underline-blue {
+    color: var(--primary-color1);
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 426px) {
+    html {
+        padding: 25px;
+        display: block;
+        background: var(--background-main) url(./images/pattern-background-mobile.svg) no-repeat;
+    }
+
+    .card {
+        margin: 0 auto;
+    }
+
+    .card .main-content {
+        padding: 15px;
+    }
+}
