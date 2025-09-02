@@ -17,12 +17,7 @@ img {
     max-width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, .bold-text {
     color: var(--title-color);
 }
 
@@ -49,7 +44,7 @@ html {
 }
 
 /* Style the image */
-.card .image img {
+.card .hero-img {
     border-radius: 15px 15px 0 0;
 }
 
@@ -58,7 +53,7 @@ html {
     padding: 20px 30px 20px;
 }
 
-.card .main-content h2 {
+.card .main-content h1 {
     margin-bottom: 10px;
 }
 
@@ -70,7 +65,7 @@ html {
     border-radius: 10px;
 }
 
-.card .main-content .plan div img {
+.card .main-content .plan .icon-music {
     margin-right: 15px;
     max-width: 40px;
 }
