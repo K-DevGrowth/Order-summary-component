@@ -22,67 +22,57 @@ h1, .bold-text {
 }
 
 html {
-    overflow: hidden;
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: 'Red Hat Display', sans-serif;
-    height: 100vh;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 1rem;
+    color: var(--text-color);
+    background: var(--background-main) url(./images/pattern-background-desktop.svg) no-repeat;
+
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    background: var(--background-main) url(./images/pattern-background-desktop.svg) no-repeat;
 }
 
-/* Style the card */
+/* Card */
 .card {
-    max-width: 400px;
-    background-color: #fff;
-    border-radius: 15px;
-    text-align: center;
-}
-
-/* Style the image */
-.card .hero-img {
-    border-radius: 15px 15px 0 0;
-}
-
-/* Main content */
-.card .main-content {
-    padding: 20px 30px 20px;
-}
-
-.card .main-content h1 {
-    margin-bottom: 10px;
-}
-
-/* Style the plan */
-.card .main-content .plan {
+    max-width: 25rem;
     background-color: var(--background-plan);
-    padding: 15px;
-    margin: 20px 0 30px;
-    border-radius: 10px;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.card .main-content .plan .icon-music {
-    margin-right: 15px;
-    max-width: 40px;
+.hero-img {
+    border-radius: 1rem 1rem 0 0;
 }
 
-/* Change background and color of the button on hover */
-.card .main-content .btn.bg-blue:hover {
-    background-color: var(--primary-color2);
-    color: #fff;
+.main-content {
+    padding: 1rem 2rem;
 }
 
-.card .main-content .btn.underline-blue:hover {
-    text-decoration: none;
-    color: var(--primary-color2);
+.main-content h1 {
+    margin-block-end: 0.5rem;
 }
 
-.card .main-content .btn:hover {
-    color: var(--title-color);
+/* Plan */
+.plan {
+    background-color: var(--background-plan);
+    padding: 0.5rem;
+    margin-block: 1rem 0 1rem;
+    border-radius: 0.5rem;
+}
+
+.icon-music {
+    margin-inline-end: 1rem;
+    max-width: 2.5rem;
 }
 
 /* Utilize classes */
@@ -93,11 +83,12 @@ html {
     justify-content: space-between;
 }
 
+/* Buttons */
 .btn {
     font: inherit;
     margin: 0 auto;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 0.6rem;
     outline: none;
     border: none;
     width: 100%;
@@ -105,34 +96,50 @@ html {
     cursor: pointer;
     background-color: transparent;
     color: var(--text-color);
-    transition: 0.5s;
+    transition: all 0.5s ease;
 }
 
-.bg-blue {
-    color: #fff;
-    margin-bottom: 5px;
+.btn.bg-blue {
+    color: var(--background-plan);
+    margin-block-end: 0.3rem;
     background-color: var(--primary-color1);
-    box-shadow: 0 5px 20px 0 var(--primary-color2);
+    box-shadow: 0 0.3rem 1rem 0 var(--primary-color2);
 }
 
-.underline-blue {
+.btn.underline-blue {
     color: var(--primary-color1);
     text-decoration: underline;
 }
 
+.btn:hover {
+    color: var(--title-color);
+}
+
+.btn.bg-blue:hover {
+    background-color: var(--primary-color2);
+    color: var(--background-plan);
+}
+
+.btn.underline-blue:hover {
+    text-decoration: none;
+    color: var(--primary-color2);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
 /* Responsive */
-@media (max-width: 426px) {
-    html {
-        padding: 25px;
-        display: block;
+@media (min-width: 27rem) {
+    body {
         background: var(--background-main) url(./images/pattern-background-mobile.svg) no-repeat;
     }
 
-    .card {
-        margin: 0 auto;
-    }
-
-    .card .main-content {
-        padding: 15px;
+    .main-content {
+        padding: 1rem;
     }
 }
