@@ -22,7 +22,7 @@ h1, .bold-text {
 }
 
 html {
-    font-size: 100%;
+    font-size: min(100%, 1.125rem);
     scroll-behavior: smooth;
 }
 
@@ -43,7 +43,7 @@ body {
 
 /* Card */
 .card {
-    max-width: 25rem;
+    max-width: 24rem;
     background-color: var(--background-plan);
     border-radius: 1rem;
     text-align: center;
@@ -66,7 +66,7 @@ body {
 .plan {
     background-color: var(--background-plan);
     padding: 0.5rem;
-    margin-block: 1rem 0 1rem;
+    margin-block: 1rem;
     border-radius: 0.5rem;
 }
 
@@ -128,8 +128,8 @@ body {
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     * {
-        transition: none !important;
-        animation: none !important;
+        transition: none;
+        animation: none;
     }
 }
 
